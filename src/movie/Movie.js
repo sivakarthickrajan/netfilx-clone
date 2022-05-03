@@ -1,33 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./movie.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes, NavLink } from "react-router-dom";
+import MovieSelected from "./MovieSelected";
 
 const Movie = ({ item }) => {
-  console.log("Movie Card", item);
-  const {
-    original_title,
-    poster_path,
-    title,
-    overview,
-    release_date,
-    original_language,
-  } = item;
+  const { title, release_date, original_language, id } = item;
+  const [clickid, setClickid] = useState("");
 
   return (
-    <div className="container">
-      <div className="movie_card">
-        <div className="thumb_nail">
+    <>
+      <NavLink
+        className="movie_card"
+        to={`MovieSelected/${id}`}
+        onClickCapture={() => setClickid(id)}
+      >
+        <div className="image">
           <img
             className="img"
             src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
             alt=""
-          />
+          ></img>
         </div>
-        <div className="title">{original_title}</div>
-        <div className="rel_date">Release Date: {release_date}</div>
-        <div className="lang">Language {original_language}</div>
-      </div>
-    </div>
+
+        <div className="movieDetailstext">
+          <div className="title">{title}</div>
+          <div className="text rel_date">Released On: {release_date}</div>
+          <div className="text lang">Lanugage: {original_language}</div>
+        </div>
+      </NavLink>
+      <Routes>
+        <Route
+          path="MovieSelected/:movieid"
+          element={<MovieSelected />}
+        ></Route>
+      </Routes>
+    </>
   );
 };
 export default Movie;

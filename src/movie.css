@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@300&family=Lobster&family=Permanent+Marker&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.home-container{
+        /* padding-top: 70px; */
+
+}
+.home_titles{
+    color:whitesmoke;
+    padding-left: 25px;
+    font-family: "Kanit";
+    font-size:50px;
+    text-align: bottom;
+    text-decoration: solid;
+    background-color: black;
+}
+.nav{
+     position:fixed;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 80px;
+    background-color:rgb(158, 133, 133)
+}
+.nav-links{
+    width: 70%;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;   
+}
+.links{
+    font-size: x-large;
+    font-family:"Kanit";
+    text-decoration: none;
+    color:black;
+
+}
+.links:hover{
+    zoom: 160%;
+    color: red;
+}
+.active{
+    padding-top: 8px;
+    background-color:black;
+    color:white;
+    zoom: 180%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.active:hover{
+    padding-top: 8px;
+    background-color:black;
+    color:red;
+    zoom: 180%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+    
+}
+.logo-image{
+    border-radius: 10px;
+    width: 200px;
+    height: 100%;   
+}
+.movie_container{
+    padding-top: 1px;
+    padding-bottom: 30px;
+    row-gap: 20px;
+    background-color:black;
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.movieDetailstext{   
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.title{
+    font-family: "Permanent Marker";
+    font-size:large
+}
+
+.text{
+    font-family: "Josefin Sans";
+    font-size: medium;
+    flex-shrink: 1;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: solid white 5px;
+}
+.img:hover{
+    zoom: 20%;
+}
+.movie_card{
+    text-decoration: none;
+    color: black;
+    margin-right: 70px;
+    border-radius: 15px;
+    background-color: white;
+    gap: 10px;
+   
+}
+.movie_card:hover{
+    zoom: 110%;
+    color:red;
+}
