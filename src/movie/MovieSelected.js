@@ -20,7 +20,7 @@ const MovieSelected = () => {
       setData(response.data.results);
     };
     data();
-  }, [movieid, apiUpcoming]);
+  }, [movieid, apiUpcoming, data]);
   console.log("videodata", data);
 
   return (

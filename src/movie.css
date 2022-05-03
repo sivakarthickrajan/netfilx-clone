@@ -7,10 +7,7 @@
     padding: 0;
     margin: 0;
 }
-.home-container{
-        /* padding-top: 70px; */
 
-}
 .home_titles{
     color:whitesmoke;
     padding-left: 25px;
@@ -26,7 +23,7 @@
     border-bottom-left-radius: 10px;
     width: 100%;
     height: 80px;
-    background-color:rgb(158, 133, 133)
+    background-color:darkgray;
 }
 .nav-links{
     width: 70%;
@@ -72,7 +69,7 @@
     height: 100%;   
 }
 .movie_container{
-    padding-top: 1px;
+    padding-top: 100px;
     padding-bottom: 30px;
     row-gap: 20px;
     background-color:black;
@@ -88,6 +85,7 @@
     font-family: "Permanent Marker";
     font-size:large
 }
+
 
 .text{
     font-family: "Josefin Sans";

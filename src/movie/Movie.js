@@ -1,20 +1,14 @@
-import React, { useState } from "react";
-import "./movie.css";
+import "../movie.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes, NavLink } from "react-router-dom";
 import MovieSelected from "./MovieSelected";
 
 const Movie = ({ item }) => {
   const { title, release_date, original_language, id } = item;
-  const [clickid, setClickid] = useState("");
 
   return (
     <>
-      <NavLink
-        className="movie_card"
-        to={`MovieSelected/${id}`}
-        onClickCapture={() => setClickid(id)}
-      >
+      <NavLink className="movie_card" to={`MovieSelected/${id}`}>
         <div className="image">
           <img
             className="img"

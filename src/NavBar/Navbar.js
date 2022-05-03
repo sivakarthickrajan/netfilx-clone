@@ -1,11 +1,11 @@
 import React from "react";
-import { NavLink, Routes, Route } from "react-router-dom";
-import Home from "./Home";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="nav">
-      <img className="logo-image" src={require("../logo.png")} alt=""></img>
-
+      <a className="logo-image" href="http://localhost:3000">
+        <img className="logo-image" src={require("../logo.png")} alt=""></img>
+      </a>
       <div className="nav-links">
         <NavLink className="links" activeclassname="active" to="/">
           Home
