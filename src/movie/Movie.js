@@ -1,7 +1,6 @@
 import "../movie.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Routes, NavLink } from "react-router-dom";
-import MovieSelected from "./MovieSelected";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Movie = ({ item }) => {
@@ -10,7 +9,7 @@ const Movie = ({ item }) => {
 
   return (
     <>
-      <NavLink className="movie_card" to={`MovieSelected/${id}`}>
+      <NavLink className="movie_card" to={`/movies/${id}`}>
         <div className="image">
           <img
             className="img"
@@ -25,12 +24,6 @@ const Movie = ({ item }) => {
           <div className="text lang">Lanugage: {original_language}</div>
         </div>
       </NavLink>
-      <Routes>
-        <Route
-          path="MovieSelected/:movieid"
-          element={<MovieSelected />}
-        ></Route>
-      </Routes>
     </>
   );
 };

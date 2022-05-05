@@ -4,11 +4,11 @@ import { useParams } from "react-router-dom";
 import api, { api_key } from "../axios";
 import MovieDetails from "./MovieDetails";
 
-const MovieSelected = () => {
+const GetMovieDetails = () => {
   const { movieid } = useParams();
   console.log("movie id ", movieid);
   const [data, setData] = useState([]);
-  const apiUpcoming = api.get(`movie/${movieid}/videos`, {
+  const apiUpcoming = api.get(`/movie/${movieid}`, {
     params: { api_key },
   });
 
@@ -17,12 +17,12 @@ const MovieSelected = () => {
     console.log("api calling ", apiUpcoming);
     const data = async () => {
       const response = await apiUpcoming;
-      setData(response.data.results);
+      setData(response.data);
     };
     data();
-  }, [movieid, apiUpcoming, data]);
-  console.log("videodata", data);
+  }, [movieid]);
+  console.log("movie details", data);
 
-  return <MovieDetails videodetails={data} />;
+  return <MovieDetails moviedetails={data} />;
 };
-export default MovieSelected;
+export default GetMovieDetails;

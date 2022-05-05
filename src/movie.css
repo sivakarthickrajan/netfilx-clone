@@ -85,7 +85,11 @@
     font-family: "Permanent Marker";
     font-size:large
 }
-
+.notfound_img{
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+}
 
 .text{
     font-family: "Josefin Sans";
@@ -113,4 +117,28 @@
 .movie_card:hover{
     zoom: 110%;
     color:red;
+}
+.aboutMovie{
+    padding-left: 10px;
+    font-family: "Kanit";
+    font-size: xx-large;
+    padding-top: 100px;
+     
+}
+.moviedetails_tagline{
+    font-size: large;
+    position: absolute;
+    top: 300px;
+    color: whitesmoke;
+    font-family: "Permanent Marker";
+}
+.detailImage{
+    border-radius: 10px;
+    
+}
+.aboutMovie{
+    display: flex;
+}
+.aboutMovie_right{
+    
 }

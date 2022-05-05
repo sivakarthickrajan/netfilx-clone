@@ -1,24 +1,13 @@
 import React from "react";
 const NotFound = () => {
   return (
-    <div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-      <div>hi</div>
-    </div>
+    <>
+      <img
+        className="notfound_img"
+        src={require("./pagenotfound.jpg")}
+        alt=""
+      />
+    </>
   );
 };
 export default NotFound;

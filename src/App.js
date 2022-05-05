@@ -6,19 +6,20 @@ import Popular from "./NavBar/Popular";
 import Navbar from "./NavBar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import { Home, Homenowplaying, Homepopular, Hometoprated } from "./NavBar/Home";
-import NotFound from "./NotFound";
+import GetMovieDetails from "./movie/GetMovieDetails";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="*" element={<NotFound />}></Route>
+        {/* <Route path="/*" element={<NotFound />}></Route> */}
 
-        <Route path="Upcoming/*" element={<Upcoming />}></Route>
-        <Route path="Toprated/*" element={<Toprated />}></Route>
-        <Route path="Nowplaying/*" element={<Nowplaying />}></Route>
-        <Route path="Popular/*" element={<Popular />}></Route>
+        <Route path="Upcoming" element={<Upcoming />}></Route>
+        <Route path="Toprated" element={<Toprated />}></Route>
+        <Route path="Nowplaying" element={<Nowplaying />}></Route>
+        <Route path="Popular" element={<Popular />}></Route>
+        <Route path="movies/:movieid" element={<GetMovieDetails />}></Route>
         <Route
           exact
           path="/"

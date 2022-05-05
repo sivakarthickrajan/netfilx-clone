@@ -1,19 +1,22 @@
-import React, { useState } from "react";
-const MovieDetails = (videodetails) => {
-  const [videokey, setVideoKey] = useState("");
-
-  setVideoKey(videodetails.key);
-
-  console.log("video key", videokey);
+import React from "react";
+const MovieDetails = ({ moviedetails }) => {
   return (
-    <div>Movie Details Components</div>
-    // <>
-    //   <iframe
-    //     width={420}
-    //     height={315}
-    //     src={`https://www.youtube.com/embed/${videokey}`}
-    //   ></iframe>
-    // </>
+    <div className="aboutMovie">
+      <div className="aboutMovie_left">
+        <img
+          className="detailImage"
+          src={`https://image.tmdb.org/t/p/w500/${moviedetails.backdrop_path}`}
+          alt=""
+        ></img>
+        <div className="moviedetails_tagline">{moviedetails.tagline}</div>
+      </div>
+      <div className="aboutMovie_right">
+        <div>{moviedetails.original_title}</div>
+        <div>{moviedetails.overview}</div>
+        <div>Budget : $ {moviedetails.budget}</div>
+        <div>Category : {moviedetails.belongs_to_collection}</div>
+      </div>
+    </div>
   );
 };
 export default MovieDetails;
