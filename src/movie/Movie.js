@@ -2,9 +2,11 @@ import "../movie.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes, NavLink } from "react-router-dom";
 import MovieSelected from "./MovieSelected";
+import { useState } from "react";
 
 const Movie = ({ item }) => {
   const { title, release_date, original_language, id } = item;
+  const [clickid, setClickid] = useState();
 
   return (
     <>

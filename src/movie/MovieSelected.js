@@ -13,7 +13,7 @@ const MovieSelected = () => {
   });
 
   useEffect(() => {
-    console.log("idid id", movieid);
+    console.log("Inside useeffect", movieid);
     console.log("api calling ", apiUpcoming);
     const data = async () => {
       const response = await apiUpcoming;
@@ -23,11 +23,6 @@ const MovieSelected = () => {
   }, [movieid, apiUpcoming, data]);
   console.log("videodata", data);
 
-  return (
-    <>
-      <div>HELLO</div>
-      <MovieDetails videodetails={data} />
-    </>
-  );
+  return <MovieDetails videodetails={data} />;
 };
 export default MovieSelected;
