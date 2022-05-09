@@ -75,7 +75,8 @@
     background-color:black;
     padding-left: 2%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
+   
 }
 .movieDetailstext{   
     padding-left: 30px;
@@ -103,7 +104,11 @@
     border: solid white 5px;
 }
 .img:hover{
-    zoom: 20%;
+    border-radius: 0px;
+    opacity: 0.5;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    
 }
 .movie_card{
     text-decoration: none;
@@ -116,29 +121,47 @@
 }
 .movie_card:hover{
     zoom: 110%;
-    color:red;
+    opacity: .7;
+    filter: alpha(opacity=50);
+     transition: all 1s;
+    -webkit-transition: all 1s;
 }
 .aboutMovie{
-    padding-left: 10px;
     font-family: "Kanit";
     font-size: xx-large;
-    padding-top: 100px;
-     
+    padding-top: 70px;
+    background-color: black;
+    
 }
-.moviedetails_tagline{
-    font-size: large;
-    position: absolute;
-    top: 300px;
-    color: whitesmoke;
+.aboutmovie_title{
+    text-align:bottom;
+    display: flex;
+    gap: 50px;
+}
+.aboutmovie_title h1{
+    padding-left: 40px;
     font-family: "Permanent Marker";
+    text-shadow:5px 5px black;
+    font-size: 54px;
+}
+.aboutmovie_title h2{
+    color:black;
+    font-family:"Josefin Sans";
+    font-size: x-large;
+    text-shadow: 2px 2px black;
 }
 .detailImage{
-    border-radius: 10px;
-    
+    filter: brightness(30%);
+    border: solid 5px rgb(58, 55, 55);
+    width:100%;
+    max-height: 89vh;  
 }
+
 .aboutMovie{
-    display: flex;
+    
 }
 .aboutMovie_right{
-    
+    position: absolute;
+    top: 100px;
+    color: whitesmoke;
 }

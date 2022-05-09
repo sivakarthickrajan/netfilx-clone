@@ -26,7 +26,7 @@ export const Hometoprated = () => {
     };
     data();
   }, []);
-  const hometop = data.slice(0, 4);
+  const hometop = data.slice(0, 5);
 
   return <MovieList data={hometop} />;
 };
@@ -40,7 +40,7 @@ export const Homepopular = () => {
     };
     data();
   }, []);
-  const homepop = data.slice(0, 4);
+  const homepop = data.slice(0, 5);
 
   return <MovieList data={homepop} />;
 };
@@ -54,7 +54,7 @@ export const Homenowplaying = () => {
     };
     data();
   }, []);
-  const homenow = data.slice(0, 4);
+  const homenow = data.slice(0, 5);
 
   return <MovieList data={homenow} />;
 };
