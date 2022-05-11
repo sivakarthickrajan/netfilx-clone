@@ -17,12 +17,16 @@
 .aboutMovie{
     position:absolute;
     top: 80px;
-  display: flex;
+  
+   
+}
+.aboutMovie_top{
+    display: flex;
   gap: 60px;
    align-items: center;
    
    max-width: 100%;
-   
+
 }
 .aboutMovie_runtime{
     display: flex;

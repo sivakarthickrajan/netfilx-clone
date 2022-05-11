@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./moviedetails.css";
 import MovieDetails from "./movie/MovieDetails";
 import Actor from "./Actors";
+import SimilarMovies from "./SimilarMovies";
 const RightNavBar = ({ moviedetails }) => {
   return (
     <>
@@ -16,7 +17,7 @@ const RightNavBar = ({ moviedetails }) => {
         <Link className="rightbar_details" to="/aboutmovie">
           Videos
         </Link>
-        <Link className="rightbar_details" to="/aboutmovie">
+        <Link className="rightbar_details" to="similarmovies">
           Similar Movies
         </Link>
         <Link className="rightbar_details" to="/aboutmovie">
@@ -26,6 +27,7 @@ const RightNavBar = ({ moviedetails }) => {
       <Routes>
         <Route path="" element={<MovieDetails moviedata={moviedetails} />} />
         <Route path="actors" element={<Actor moviedata={moviedetails} />} />
+        <Route path="similarmovies" element={<SimilarMovies />} />
       </Routes>
     </>
   );

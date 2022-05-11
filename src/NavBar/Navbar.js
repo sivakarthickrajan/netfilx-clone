@@ -7,19 +7,19 @@ const Navbar = () => {
         <img className="logo-image" src={require("../logo.png")} alt=""></img>
       </a>
       <div className="nav-links">
-        <NavLink className="links" activeclassname="active" to="/">
+        <NavLink className="links" to="/">
           Home
         </NavLink>
-        <NavLink className="links" activeclassname="active" to="/Upcoming">
+        <NavLink className="links" to="/Upcoming">
           Up Coming
         </NavLink>
-        <NavLink className="links" activeclassname="active" to="/Toprated">
+        <NavLink className="links" to="/Toprated">
           Top Rated
         </NavLink>
-        <NavLink className="links" activeclassname="active" to="/Nowplaying">
+        <NavLink className="links" to="/Nowplaying">
           Now Playing
         </NavLink>
-        <NavLink className="links" activeclassname="active" to="/Popular">
+        <NavLink className="links" to="/Popular">
           Popular
         </NavLink>
       </div>

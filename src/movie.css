@@ -43,17 +43,7 @@
     zoom: 160%;
     color: darkgray;
 }
-.active{
-    padding-top: 8px;
-    background-color:black;
-    border-radius: 5px;
-    
-    color:white;
-    zoom: 180%;
-   
-    padding-left: 4px;
-    padding-right: 4px;
-}
+
 .active:hover{
     padding-top: 8px;
     background-color:rgb(20, 20, 20);
