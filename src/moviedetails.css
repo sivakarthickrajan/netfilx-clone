@@ -4,7 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@300&family=Lobster&family=Permanent+Marker&display=swap');
 
 
-
+*{
+    padding: 0;
+    margin: 0;
+}
 
 .bg_image{
     width: 100%;
@@ -13,10 +16,13 @@
 }
 .aboutMovie{
     position:absolute;
-    top: 100px;
-   display: flex;
+    top: 80px;
+  display: flex;
+  gap: 60px;
    align-items: center;
-   gap: 100px;
+   
+   max-width: 100%;
+   
 }
 .aboutMovie_runtime{
     display: flex;
@@ -30,14 +36,71 @@
     height: 50%;
 }
 .aboutMovie_left{
-    padding-left: 30px;
+    padding-top: 30px;
+    align-self: flex-start;
+    padding-left: 70px;
     max-width:30%;
    
 }
 .aboutMovie_right{
-    
+    padding-top: 30px;
     align-self: flex-start;
-   padding-top: 50px;
+    margin-right: 300px;
+ 
     padding-right:100px;
     color: whitesmoke;
+}
+.rightBar{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    
+    justify-content: space-around;
+    text-align: center;
+    z-index: 1;
+    top: 100px;
+    left: 77%;
+    position: fixed;
+    border-radius: 15px;
+    
+    background-color: rgba(0, 0, 0, 0.329);
+    width: 300px;
+    height: 80vh;
+    
+    color: whitesmoke;
+}
+.rightbar_details{
+    text-decoration: none;
+    border-radius: 15px;
+    border: solid whitesmoke 2px;
+    padding-left: 86px;
+    padding-right: 86px;
+    font-family: "Josefin Sans";
+    color: whitesmoke;
+    font-size:x-large;
+
+    
+}
+.right{
+    background-color: red;
+}
+.dp_image{
+   width: 100px;
+   height: 90px; 
+   
+}
+.actor_bgimage{
+    
+    width: 100%;
+    height:max-content;
+    filter: brightness(30%);
+
+}
+
+.actor{
+    
+    position: absolute;
+    top:100px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    
 }
