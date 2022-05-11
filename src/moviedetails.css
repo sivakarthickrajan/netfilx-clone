@@ -11,7 +11,7 @@
 
 .bg_image{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     filter: brightness(30%);
 }
 .aboutMovie{
@@ -49,8 +49,8 @@
 .aboutMovie_right{
     padding-top: 30px;
     align-self: flex-start;
-    margin-right: 300px;
- 
+    
+    max-height: 90vh;
     padding-right:100px;
     color: whitesmoke;
 }
@@ -90,21 +90,25 @@
 .dp_image{
    width: 100px;
    height: 90px; 
+   border: solid  darkgray 3px;
+   border-radius: 45px;
+   
    
 }
-.actor_bgimage{
-    
-    width: 100%;
-    height:max-content;
-    filter: brightness(30%);
 
-}
 
 .actor{
+    width: 55px;
+    padding-top: 20px;
+    gap: 10px;
+    display: flex;
+  
     
-    position: absolute;
-    top:100px;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    
+}
+
+.genres{
+    background-color: rgba(0, 0, 0, 0.678);
+    border: solid 1px rgb(197, 193, 193) ;
+    padding-left: 3px;
+    padding-right: 3px;
 }

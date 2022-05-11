@@ -16,16 +16,13 @@ const Actor = ({ moviedata }) => {
     };
     data();
   }, [movieid]);
+  const dataSlice = data.slice(0, 5);
 
   return (
     <>
-      <img
-        className="actor_bgimage"
-        src={`https://image.tmdb.org/t/p/original/${moviedata.backdrop_path}`}
-        alt=""
-      ></img>
+      <h1>Actors</h1>
       <div className="actor">
-        {data.map((actor) => {
+        {dataSlice.map((actor) => {
           return (
             <div className="actor_card">
               <img
@@ -33,11 +30,11 @@ const Actor = ({ moviedata }) => {
                 src={`https://image.tmdb.org/t/p/w300${actor.profile_path}`}
                 alt=""
               ></img>
-              <div>{actor.original_name}</div>
+              <h5>{actor.original_name}</h5>
+              <h6 style={{ font: "italic" }}>as {actor.character}</h6>
             </div>
           );
         })}
-        ;
       </div>
     </>
   );

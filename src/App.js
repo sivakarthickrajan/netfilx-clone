@@ -7,7 +7,6 @@ import Navbar from "./NavBar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import { Home, Homenowplaying, Homepopular, Hometoprated } from "./NavBar/Home";
 import GetMovieDetails from "./movie/GetMovieDetails";
-import RightNavBar from "./RightNavBar";
 
 function App() {
   return (

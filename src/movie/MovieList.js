@@ -6,7 +6,6 @@ const MovieList = ({ data }) => {
       {data.map((dataitems) => {
         return <Movie item={dataitems} />;
       })}
-      <Outlet />
     </div>
   );
 };
