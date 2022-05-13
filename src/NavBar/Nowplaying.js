@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MovieList from "../movie/MovieList";
 import api, { api_key } from "../axios";
+import Spinner from "../Spinner";
 
 const Nowplaying = () => {
   const [data, setData] = useState([]);
@@ -12,6 +13,6 @@ const Nowplaying = () => {
     };
     data();
   }, []);
-  return <MovieList data={data} />;
+  return data ? <MovieList data={data} /> : <Spinner />;
 };
 export default Nowplaying;

@@ -18,6 +18,11 @@ const SimilarMovies = () => {
     data();
   }, [movieid]);
   const slicedata = data.slice(0, 5);
-  return <MovieList data={slicedata} />;
+  return (
+    <>
+      <div className="similartitles">SimilarMovies</div>
+      <MovieList data={slicedata} />
+    </>
+  );
 };
 export default SimilarMovies;

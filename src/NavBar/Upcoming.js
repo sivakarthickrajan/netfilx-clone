@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieList from "../movie/MovieList";
 import api, { api_key } from "../axios";
-import Spinner from "../Spinner";
 
 const Upcoming = () => {
   const [data, setData] = useState([]);
