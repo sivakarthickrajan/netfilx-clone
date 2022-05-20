@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import Actor from "../Actors";
 
 import "../moviedetails.css";
@@ -40,7 +41,11 @@ const MovieDetails = ({ moviedata }) => {
                 >
                   {moviedata.genres?.length > 0 &&
                     moviedata.genres.map((genre) => {
-                      return <div>{genre.name}</div>;
+                      return (
+                        <Link to={`/genres/${genre.id}`} className="genre_name">
+                          {genre.name}
+                        </Link>
+                      );
                     })}
                 </h5>
               </div>

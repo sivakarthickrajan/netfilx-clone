@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Route, Routes, useParams, Link } from "react-router-dom";
+import ActorDetails from "./ActorDetails";
+
 import api, { api_key } from "./axios";
 import "./moviedetails.css";
 const Actor = ({ moviedata }) => {
-  const { movieid } = useParams();
+  const { movieid, actorpage } = useParams();
   const [data, setData] = useState([]);
+  //const [dataslice, setDataslice] = useState([]);
+  const [actorcounter, setActorcounter] = useState(0);
+  const [slicestart, setSlicestart] = useState(0);
+  const [sliceend, setSliceend] = useState(5);
 
   const apiUpcoming = api.get(`/movie/${movieid}/credits`, {
     params: { api_key },
@@ -16,25 +22,39 @@ const Actor = ({ moviedata }) => {
     };
     data();
   }, [movieid]);
-  const dataSlice = data.slice(0, 5);
+  function add() {
+    setActorcounter(actorcounter + 1);
+    setSlicestart(actorcounter * 6);
+    setSliceend(slicestart + 5);
+  }
+  function minus() {
+    setActorcounter(actorcounter - 1);
+    setSlicestart(actorcounter * 6);
+    setSliceend(slicestart + 5);
+  }
+
+  const dataslice = data.slice(slicestart, sliceend);
 
   return (
     <>
       <h1>Actors</h1>
+
       <div className="actor">
-        {dataSlice.map((actor) => {
+        {actorcounter !== 0 && (
+          <button onClick={minus} className="actorbutton">
+            count{actorcounter}
+          </button>
+        )}
+
+        {dataslice.map((actor) => {
           return (
-            <div className="actor_card">
-              <img
-                className="dp_image"
-                src={`https://image.tmdb.org/t/p/w300${actor.profile_path}`}
-                alt=""
-              ></img>
-              <h5>{actor.original_name}</h5>
-              <h6 style={{ font: "italic" }}>as {actor.character}</h6>
-            </div>
+            <ActorDetails actordetail={actor} actorcounter={actorcounter} />
           );
         })}
+
+        <button onClick={add} className="actorbutton">
+          count{actorcounter}
+        </button>
       </div>
     </>
   );

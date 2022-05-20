@@ -22,9 +22,8 @@ const GetMovieDetails = () => {
     const data = async () => {
       const response = await apiUpcoming;
       setData(response.data);
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+
+      setLoading(false);
     };
     data();
   }, [movieid]);

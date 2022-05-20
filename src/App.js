@@ -7,6 +7,9 @@ import Navbar from "./NavBar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import { Home, Homenowplaying, Homepopular, Hometoprated } from "./NavBar/Home";
 import GetMovieDetails from "./movie/GetMovieDetails";
+import GenreRelated from "./GenreRelated";
+import SearchByMovie from "./SearchByMovie";
+import ActorRelated from "./ActorRelated";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="Nowplaying" element={<Nowplaying />}></Route>
         <Route path="Popular" element={<Popular />}></Route>
         <Route path="movies/:movieid/*" element={<GetMovieDetails />}></Route>
+        <Route path="genres/:genre" element={<GenreRelated />}></Route>
+        <Route path="searchname=/:searchinput" element={<SearchByMovie />} />
+        <Route path="cast_name/:cast_name" element={<ActorRelated />} />
 
         <Route
           exact

@@ -88,6 +88,7 @@
     background-color: red;
 }
 .dp_image{
+    object-fit:fill;
    width: 100px;
    height: 90px; 
    border: solid  darkgray 3px;
@@ -104,7 +105,9 @@
     display: flex;
   
     
+
 }
+
 .similartitles{
     color: whitesmoke;
     font-family: "Kanit";
@@ -114,18 +117,27 @@
 }
 
 .genres{
-    background-color: rgba(0, 0, 0, 0.678);
-    border: solid 1px rgb(197, 193, 193) ;
+   
     padding-left: 3px;
     padding-right: 3px;
 }
-.spinner{
-    
+.genre_name{
+    background-color: rgba(0, 0, 0, 0.678);
+    border: solid 1px rgb(197, 193, 193) ;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    gap:10px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
    
 
     
     
-}
+
 .spinner-div{
     display: flex;
     width: 100%;
@@ -134,4 +146,12 @@
    align-items: center;
     
     
+}
+.actorbutton{
+    align-self: end;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.473);
+    border: none;
+    border-radius: 5px;
+    height: 50px;
 }

@@ -1,17 +1,24 @@
 import "../movie.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Spinner from "../Spinner";
 
 const Movie = ({ item }) => {
-  const { title, release_date, original_language, id } = item;
+  const [loading, setLoading] = useState(false);
+  const { title, release_date, original_language, id, poster_path } = item;
 
-  return (
+  useEffect(() => {
+    setLoading(true);
+  }, [item]);
+
+  return loading ? (
     <>
       <NavLink className="movie_card" to={`/movies/${id}`}>
         <div className="image">
           <img
             className="img"
-            src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w300${poster_path}`}
             alt=""
           ></img>
         </div>
@@ -23,6 +30,8 @@ const Movie = ({ item }) => {
         </div>
       </NavLink>
     </>
+  ) : (
+    <Spinner />
   );
 };
 export default Movie;
